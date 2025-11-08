@@ -1119,15 +1119,15 @@ header form i {
 }
 
 .subscribe input[type='email'] {
-  padding: 20px 20px 20px 60px;
-  background: none;
-  border: none;
-  outline: none;
-  color: white;
-  caret-color: white;
   flex: 1;
+  min-width: 0;
+  padding: 20px 20px 20px 60px;
   border: solid 1px white;
   border-right: none;
+  outline: none;
+  color: white;
+  background: none;
+  caret-color: white;
 }
 
 .subscribe input[type='email']::placeholder {
@@ -1142,9 +1142,15 @@ header form i {
   border: none;
   outline: none;
   width: 130px;
-  padding: 10px 20px;
+  padding: 10px 0;
   cursor: pointer;
   transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+  .subscribe input[type='submit'] {
+    width: 110px;
+  }
 }
 
 .subscribe input[type='submit']:hover {
